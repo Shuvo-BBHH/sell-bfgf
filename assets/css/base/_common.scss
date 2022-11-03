@@ -1,0 +1,339 @@
+/*----------------------------------------*/
+/*  01. Template default CSS
+/*----------------------------------------*/
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+/* Font Family
+
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Poppins', sans-serif;
+
+*/
+
+/*-- Common Style --*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  height: 100%;
+  @media screen and (max-width: 380px) {
+    height: auto;
+  }
+  box-sizing: border-box;
+}
+body {
+  font-family: $font-body;
+  font-size: $font-size-body;
+  color: $color-body;
+  background: $color-primary;
+  line-height: 1.52;
+}
+
+.body-bg-alice-blue {
+  background: $color-alice-blue;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: $font-size-h1;
+  font-weight: 900;
+  line-height: 1.4;
+}
+h2 {
+  font-size: $font-size-h2;
+  font-weight: 500;
+  line-height: 1.5;
+}
+h3 {
+  font-size: $font-size-h3;
+  font-weight: 400;
+  line-height: 1.66;
+}
+h4 {
+  font-size: $font-size-h4;
+  font-weight: 900;
+  line-height: 1.56;
+}
+h5 {
+  font-size: $font-size-h5;
+  font-weight: 900;
+  line-height: 1.56;
+}
+h6 {
+  font-size: $font-size-h6;
+  font-weight: 900;
+  line-height: 1.56;
+}
+a {
+  color: $color-body;
+  text-decoration: none;
+  &:hover {
+    color: $color-body;
+  }
+}
+a,
+button,
+.btn,
+img,
+input {
+  transition: $transition-base;
+}
+a,
+a:hover,
+a:focus,
+a:active,
+button,
+button:focus,
+.btn,
+.btn:focus,
+input,
+input:focus,
+select,
+textarea,
+.swiper-pagination-bullet,
+.swiper-slide,
+.append-button,
+.swiper-button-next,
+.swiper-button-prev {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.px-0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.img-full {
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.review-star {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: flex-start;
+  color: #ff9f0a;
+  font-size: 14px;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.col-12 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.text-start {
+  text-align: start;
+}
+.text-center {
+  text-align: center;
+}
+.text-end {
+  text-align: end;
+}
+
+@media (min-width: 576px) {
+  .container,
+  .container-sm {
+    max-width: 540px;
+  }
+}
+
+.main-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.progress-btn {
+  position: relative;
+  display: inline-block;
+
+  @mixin progress-commom-style {
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    height: calc(100% + 24px);
+    width: calc(100% + 24px);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    @include progress-commom-style;
+    border: 2px solid rgba($color-radical-red, 0.2);
+  }
+
+  &--0::before {
+    @include progress-commom-style;
+    border-top: 2px solid rgba($color-radical-red, 1);
+    border-right: 2px solid rgba($color-radical-red, 0);
+    border-bottom: 2px solid rgba($color-radical-red, 0);
+    border-left: 2px solid rgba($color-radical-red, 0);
+  }
+  &--25::before {
+    @include progress-commom-style;
+    border-top: 2px solid rgba($color-radical-red, 1);
+    border-right: 2px solid rgba($color-radical-red, 0);
+    border-bottom: 2px solid rgba($color-radical-red, 0);
+    border-left: 2px solid rgba($color-radical-red, 0);
+  }
+  &--50::before {
+    @include progress-commom-style;
+    border-top: 2px solid rgba($color-radical-red, 1);
+    border-right: 2px solid rgba($color-radical-red, 1);
+    border-bottom: 2px solid rgba($color-radical-red, 0);
+    border-left: 2px solid rgba($color-radical-red, 0);
+  }
+  &--75::before {
+    @include progress-commom-style;
+    border-top: 2px solid rgba($color-radical-red, 1);
+    border-right: 2px solid rgba($color-radical-red, 1);
+    border-bottom: 2px solid rgba($color-radical-red, 1);
+    border-left: 2px solid rgba($color-radical-red, 0);
+  }
+  &--100::before {
+    @include progress-commom-style;
+    border-top: 2px solid rgba($color-radical-red, 1);
+    border-right: 2px solid rgba($color-radical-red, 1);
+    border-bottom: 2px solid rgba($color-radical-red, 1);
+    border-left: 2px solid rgba($color-radical-red, 1);
+  }
+
+  &:hover {
+    color: invert($color: #000000);
+  }
+}
+
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+.flex-end {
+  justify-content: flex-end;
+}
+
+.setting-name {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.setting-email {
+  margin-bottom: 5 !important;
+}
+
+.default-form-wrapper {
+  &.profile-wrapper {
+    margin-top: 15px;
+  }
+}
+.image {
+  position: relative;
+}
+.upload-file {
+  opacity: 0;
+  position: absolute;
+}
+.upload-image-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #ff9f0a;
+  color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  cursor: pointer;
+  i {
+    font-size: 16px;
+    line-height: 1;
+  }
+}
+
+.product-gallery-image {
+  padding-top: 30px;
+}
+
+@import "common/typhography";
+@import "common/button";
+@import "common/measuremant";
+@import "common/section";
+@import "mixins";

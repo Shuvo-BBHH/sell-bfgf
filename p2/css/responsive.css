@@ -1,0 +1,91 @@
+/* Large Screen  */
+
+@media only screen and (min-width: 1400px) {
+}
+
+/* Laptop Screen  */
+
+@media only screen and (min-width: 1171px) and (max-width: 1400px) {
+}
+
+/* desktop :992px. */
+
+@media only screen and (min-width: 992px) and (max-width: 1169px) {
+  .single-feature .content p {
+    font-size: 14px;
+  }
+}
+
+/* Tablet :768px. */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .hero-content h1 {
+    font-size: 30px;
+  }
+  .demo-content h1 {
+    font-size: 30px;
+  }
+  .demo-item .image i {
+    height: 50px;
+    line-height: 46px;
+    width: 50px;
+  }
+  .single-feature .content p {
+    font-size: 14px;
+  }
+  .footer-section h1 {
+    font-size: 24px;
+  }
+}
+
+/* Large Mobile :480px. */
+
+@media only screen and (max-width: 767px) {
+  .hero-content h1 {
+    font-size: 24px;
+  }
+  .hero-content h1 strong {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  .hero-content a {
+    margin-top: 20px;
+  }
+  .demo-content h1 {
+    font-size: 30px;
+  }
+  .section-title h1 {
+    font-size: 30px;
+  }
+  .footer-section .buy-btn {
+    float: left;
+  }
+}
+
+/* small mobile :320px. */
+
+@media only screen and (max-width: 479px) {
+  .logo a {
+    width: 116px;
+  }
+  .buy-btn {
+    font-size: 11px;
+    height: 34px;
+    padding: 3px 25px;
+    margin-top: 0;
+  }
+
+  .hero-content h1 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .hero-content h1 strong {
+    font-size: 30px;
+  }
+  .hero-content p {
+    font-size: 13px;
+  }
+  .hero-content a {
+    margin-top: 20px;
+  }
+}

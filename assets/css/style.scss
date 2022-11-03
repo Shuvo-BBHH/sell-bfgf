@@ -1,0 +1,58 @@
+/*-----------------------------------------------------------------------------------
+    Template Name: Template Name
+    Version: 1.0
+-----------------------------------------------------------------------------------
+    
+    CSS INDEX
+    ===================
+	
+    01. Template default CSS
+    02. Header
+    03. Slider
+    04. Shipping
+    05. Product
+    06. Banner
+    07. Blog
+    08. Testimonial
+    09. Brand
+    10. Breadcrumb
+    11. About
+    12. Shop
+    13. Sidebar
+    14. Contact
+    15. My Account
+    16. Login & Register
+    17. Cart
+    18. Wishlist
+    19. Compare
+    20. Checkout
+    21. FAQ
+    22. Privacy Policy
+    23. 404
+-----------------------------------------------------------------------------------*/
+
+// Default
+
+@import "base/variabls";
+@import "base/mixins";
+@import "base/common";
+
+@import "components/search-n-filter";
+@import "components/hero";
+@import "components/catagories";
+@import "components/product";
+@import "components/user-event";
+@import "components/banner";
+
+@import "pages/single-product";
+@import "pages/cart";
+@import "pages/profile";
+@import "pages/login";
+@import "pages/intro";
+@import "pages/chat";
+@import "pages/checkout";
+@import "pages/contact";
+
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/offcanvas";
